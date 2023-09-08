@@ -1,3 +1,8 @@
+.showcard__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
   display: flex;
   overflow-x: auto;
