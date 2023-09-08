@@ -9,7 +9,7 @@ function ShowCards({ posters, titles }) {
 
   return (
     <div className="showcard__container">
-      <h2 className="showcards__category">Trending</h2>
+      {/*<h2 className="showcards__category">Popular</h2>*/}
       <div className="wrapper">
         {posters.map((poster, index) => (
           <div key={index}>

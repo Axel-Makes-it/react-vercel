@@ -30,6 +30,8 @@
 
 .showcards__title {
   padding-left: 15px;
+  color: #ffffffd0;
+  font-family: "Graphik-md";
 }
 
 .showcards__category {
@@ -44,4 +46,9 @@
 @font-face {
   font-family: "Graphik-md";
   src: url("/public/fonts/FutuBold.ttf") format("truetype"); /* Corrected path */
+}
+
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("/public/fonts/Graphik-Regular.ttf") format("truetype"); /* Corrected path */
 }

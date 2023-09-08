@@ -1,5 +1,5 @@
-import "./App.css";
-import PopularMovies from "./api/PopularMovies";
+import React from "react";
+import ShowMoviesShows from "./api/ShowMoviesShows";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 
@@ -8,7 +8,10 @@ function App() {
     <div className="app-container">
       <Nav />
       <Banner />
-      <PopularMovies />
+      <ShowMoviesShows category="popular" />
+      <ShowMoviesShows category="top_rated" />
+      <ShowMoviesShows category="upcoming" />
+      <ShowMoviesShows category="popular" />
     </div>
   );
 }
