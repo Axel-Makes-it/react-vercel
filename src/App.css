@@ -4,6 +4,8 @@
 * {
   margin: 0;
   padding: 0;
+  color: #ffffff;
+  font-family: "Graphik";
 }
 
 .app-container {
@@ -57,4 +59,9 @@ html:hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #808080;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/public/fonts/Graphik-Medium.ttf") format("truetype"); /* Corrected path */
 }

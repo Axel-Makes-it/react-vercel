@@ -1,4 +1,5 @@
 import "./App.css";
+import PopularMovies from "./api/PopularMovies";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import ShowCards from "./components/ShowCards";
@@ -11,6 +12,7 @@ function App() {
       <ShowCards />
       <ShowCards />
       <ShowCards />
+      <PopularMovies />
     </div>
   );
 }
