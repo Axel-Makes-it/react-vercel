@@ -31,3 +31,17 @@
 .showcards__title {
   padding-left: 15px;
 }
+
+.showcards__category {
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  font-family: "Graphik-md";
+  font-size: 24px;
+}
+
+@font-face {
+  font-family: "Graphik-md";
+  src: url("/public/fonts/FutuBold.ttf") format("truetype"); /* Corrected path */
+}
