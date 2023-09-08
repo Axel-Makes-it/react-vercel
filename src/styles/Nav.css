@@ -102,6 +102,7 @@ li {
   left: 40%;
   cursor: pointer;
   transition: 0.53s;
+  z-index: 999999;
 }
 
 .nav__menu__selected:hover {
