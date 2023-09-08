@@ -17,7 +17,7 @@ function ShowCards({ posters, titles }) {
               src={`https://image.tmdb.org/t/p/w500${poster}`}
               alt=""
             />{" "}
-            <p>{titles[index]}</p>
+            <p className="showcards__title">{titles[index]}</p>
           </div>
         ))}
       </div>
