@@ -164,6 +164,7 @@ li {
     display: block;
     display: flex;
     align-items: center;
+    z-index: 99999;
   }
   .nav__select__menu {
     display: none; /* modal*/
