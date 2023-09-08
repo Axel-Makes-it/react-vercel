@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import ShowCards from "../components/ShowCards";
 
 function PopularMovies() {
-  const API_KEY = "c566f55b172728d7f84abac7efdfa535"; // Replace with your TMDb API key
+  const API_KEY = "c566f55b172728d7f84abac7efdfa535";
 
-  const [popularMovies, setPopularMovies] = useState([]);
+  const [moviePosters, setMoviePosters] = useState([]);
 
   useEffect(() => {
-    async function PopularMovies() {
+    async function fetchMoviePosters() {
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
@@ -14,7 +15,8 @@ function PopularMovies() {
 
         if (res.ok) {
           const data = await res.json();
-          setPopularMovies(data.results);
+          const posters = data.results.map((movie) => movie.backdrop_path);
+          setMoviePosters(posters);
         } else {
           console.error("Error fetching popular movies");
         }
@@ -23,18 +25,10 @@ function PopularMovies() {
       }
     }
 
-    PopularMovies();
+    fetchMoviePosters();
   }, [API_KEY]);
 
-  return (
-    <div>
-      <ul>
-        {popularMovies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <ShowCards posters={moviePosters} />;
 }
 
 export default PopularMovies;

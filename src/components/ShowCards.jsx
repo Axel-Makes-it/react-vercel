@@ -1,41 +1,31 @@
 import React from "react";
-import cardExampleImage from "../images/bearCard.jpg";
+import PropTypes from "prop-types"; // Import PropTypes for prop type validation
 import "../styles/ShowCards.css";
 
-function ShowCards() {
+function ShowCards({ posters }) {
+  if (!Array.isArray(posters)) {
+    return null;
+  }
+
   return (
     <>
       <div className="wrapper">
-        <div className="round">
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
-        <div>
-          <img className="card" src={cardExampleImage} alt="" />
-        </div>
+        {posters.map((poster, index) => (
+          <div key={index}>
+            <img
+              className="card"
+              src={`https://image.tmdb.org/t/p/w500${poster}`}
+              alt=""
+            />
+          </div>
+        ))}
       </div>
     </>
   );
 }
+
+ShowCards.propTypes = {
+  posters: PropTypes.array,
+};
 
 export default ShowCards;

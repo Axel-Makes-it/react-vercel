@@ -10,8 +10,7 @@ function App() {
       <Nav />
       <Banner />
       <ShowCards />
-      <ShowCards />
-      <ShowCards />
+
       <PopularMovies />
     </div>
   );
