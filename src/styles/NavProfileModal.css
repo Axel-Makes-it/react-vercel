@@ -1,5 +1,6 @@
 .navProfileModal__container {
   position: relative;
+  z-index: 1;
 }
 
 .navProfileModal__menu {
@@ -10,9 +11,9 @@
   width: 280px;
   height: 150px;
   position: absolute;
-  top: 61px;
-  right: 30px;
-  z-index: 999;
+  top: 30px;
+  right: 20px;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -31,6 +32,9 @@
 .navProfileModal__menu li:hover {
   color: #ffffff;
 }
+.nav__select__menu {
+  right: 23vw;
+}
 
 @font-face {
   font-family: "Graphik-Medium";
@@ -39,6 +43,6 @@
 
 @media (max-width: 768px) {
   .navProfileModal__menu {
-    top: 0px;
+    top: 28px;
   }
 }

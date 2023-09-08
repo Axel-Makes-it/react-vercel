@@ -1,0 +1,50 @@
+/* In your Hero.css file */
+.banner-container {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: flex-end; /* Align the content to the bottom */
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(
+      to top,
+      #1e2126,
+      #1e21264b,
+      #1e212660,
+      #1e21262a,
+      transparent
+    ),
+    linear-gradient(to right, #1e2126bb, #1e21261e, transparent),
+    linear-gradient(to left, #1e2126bb, #1e212628, #1e212613, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-info {
+  height: 700px;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center the child elements horizontally */
+  justify-content: flex-start; /* Align child elements to the bottom */
+}
+
+.logo {
+  margin-bottom: 20px; /* Adjust this margin as needed */
+}

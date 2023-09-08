@@ -2,18 +2,18 @@
 
 .nav__container {
   background-color: #16181d;
-  padding: 9px 40px 9px 40px;
   font-size: 16px;
   font-family: "Graphik";
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  padding: 9px 40px 9px 40px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  /* z-index: 1000; To ensure it's on top of other elements */
+  z-index: 99999;
+  /*  To ensure it's on top of other elements */
 }
 
 .nav__logo__container {
@@ -31,6 +31,7 @@ li {
   border-radius: 10px;
   transition: 0.55s;
 }
+
 .nav__search__container:hover {
   background-color: #323843e1;
 }
@@ -51,11 +52,16 @@ li {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 15px;
+}
+
+.nav__profile:hover {
+  background-color: #272c34;
 }
 
 .nav__profile__container {
   display: flex;
-  gap: 30px;
+  gap: 0px;
   align-items: center;
 }
 
@@ -81,10 +87,11 @@ li {
 /* nav menu for smaller screens */
 
 .nav__menu__selected {
-  background-color: #424957;
+  background-color: #4a4c51;
   display: flex;
   gap: 10px;
-  padding: 14px;
+
+  padding: 12px 15px 12px 15px;
   border-radius: 8px;
   align-items: center;
   color: #ffffff;
@@ -96,8 +103,9 @@ li {
   cursor: pointer;
   transition: 0.53s;
 }
+
 .nav__menu__selected:hover {
-  background-color: #5c6372;
+  background-color: #65686d;
 }
 
 .nav__select__container {
@@ -118,6 +126,7 @@ li {
   outline: none;
   display: none;
   position: fixed;
+  z-index: 1;
 }
 
 .nav__select__btn {
@@ -159,6 +168,17 @@ li {
     display: none; /* modal*/
     top: 57px;
   }
+  .nav__container {
+    padding: 9px 20px 9px 20px;
+  }
+}
+
+.banner__container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 700px;
 }
 
 @media (min-width: 768px) {

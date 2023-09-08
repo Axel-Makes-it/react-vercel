@@ -7,33 +7,50 @@ import NavProfileModal from "./NavProfileModal";
 
 function Nav() {
   const menu = ["Home", "TV", "Movies", "My Stuff", "Hubs"];
+
   const [menuVisible, setMenuVisible] = useState(false);
+  const [profileModalVisible, setProfileModalVisible] = useState(false);
+
+  function handleModal() {
+    setProfileModalVisible(!profileModalVisible);
+  }
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
   const selectMenuRef = useRef(null);
+  const profileModalRef = useRef(null);
 
   useEffect(() => {
+    function handleOutsideClick(event) {
+      // Check if the click is outside the select menu or profile modal
+      if (
+        selectMenuRef.current &&
+        !selectMenuRef.current.contains(event.target) &&
+        event.target.className !== "nav__menu__selected" &&
+        !event.target.closest(".nav__menu__selected")
+      ) {
+        setMenuVisible(false);
+      }
+
+      // Check if the click is outside the profile modal
+      if (
+        profileModalRef.current &&
+        !profileModalRef.current.contains(event.target) &&
+        event.target.className !== "nav__profile" &&
+        !event.target.closest(".nav__profile")
+      ) {
+        setProfileModalVisible(false);
+      }
+    }
+
     window.addEventListener("click", handleOutsideClick);
+
     return () => {
       window.removeEventListener("click", handleOutsideClick);
     };
   }, []);
-
-  const handleOutsideClick = (event) => {
-    // I'm checking if the click is outside the select menu and
-    // not on the toggle button or its text
-    if (
-      selectMenuRef.current &&
-      !selectMenuRef.current.contains(event.target) &&
-      event.target.className !== "nav__menu__selected" &&
-      !event.target.closest(".nav__menu__selected")
-    ) {
-      setMenuVisible(false);
-    }
-  };
 
   return (
     <>
@@ -50,8 +67,12 @@ function Nav() {
           ))}
         </ul>
 
-        {/*The modal menu selector*/}
-        <ul className="nav__menu__selected" onClick={toggleMenu}>
+        {/* The modal menu selector */}
+        <ul
+          className="nav__menu__selected"
+          onClick={toggleMenu}
+          ref={selectMenuRef}
+        >
           <li>Home</li>
           <li>
             <img src={downIcon} alt="dropdown-icon" />
@@ -62,13 +83,18 @@ function Nav() {
           <li className="nav__search__container">
             <img src={searchIcon} alt="search" width={27} height={27} />
           </li>
-          <li className="nav__profile">
+          <li
+            className={`nav__profile ${profileModalVisible ? "active" : null}`}
+            onClick={handleModal}
+            ref={profileModalRef}
+          >
             <p>A</p>
           </li>
+          {profileModalVisible && <NavProfileModal />}
         </ul>
       </div>
+      {/* The modal menu for smaller screens */}
       <>
-        {/*The modal menu for smaller screen*/}
         <div className="nav__select__container" ref={selectMenuRef}>
           <ul
             className="nav__select__menu"
@@ -81,7 +107,6 @@ function Nav() {
             ))}
           </ul>
         </div>
-        <NavProfileModal />
       </>
     </>
   );

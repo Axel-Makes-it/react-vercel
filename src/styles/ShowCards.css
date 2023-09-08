@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.card {
+  width: 310px;
+  height: 190px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 5px solid transparent;
+  box-shadow: 0 0 5px transparent; /* Add a transparent box-shadow initially */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Add transitions for smoother hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgb(0, 0, 0); /* Change box-shadow color on hover to white */
+  border: 5px solid white; /* Add a white border on hover */
+}
