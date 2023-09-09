@@ -13,9 +13,6 @@
   flex-direction: column;
 }
 
-/* Custom horizontal scrollbar styles for the entire window */
-/* Target only the horizontal scrollbar */
-/* WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   height: 8px; /* Adjust the height to your preference */
 }
@@ -24,22 +21,16 @@
   background-color: #6d6d6d;
 }
 
-/* Custom vertical scrollbar styles for the entire window */
-/* Target only the vertical scrollbar */
-/* WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar:vertical {
   width: 8px; /* Adjust the width to your preference */
   background-color: transparent; /* Make it transparent */
 }
 
-/* Firefox */
-/* Hide the default vertical scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: #555 transparent;
 }
 
-/* Restore the default vertical scrollbar for Firefox when hovering */
 html:hover {
   scrollbar-color: auto auto;
 }

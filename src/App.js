@@ -11,6 +11,7 @@ function App() {
       <ShowMoviesShows category="popular" />
       <ShowMoviesShows category="top_rated" />
       <ShowMoviesShows category="upcoming" />
+      <ShowMoviesShows category="top_rated" />
       <ShowMoviesShows category="popular" />
     </div>
   );
