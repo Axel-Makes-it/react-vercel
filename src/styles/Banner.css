@@ -33,7 +33,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .banner__info__season {
@@ -128,7 +128,7 @@
 
 @font-face {
   font-family: "Graphik";
-  src: url("/public/fonts/Graphik-Medium.ttf") format("truetype"); /* Corrected path */
+  src: url("/public/fonts/Graphik-Medium.ttf") format("truetype");
 }
 
 @media (max-width: 767px) {
@@ -136,9 +136,9 @@
     height: auto;
     padding: 20px;
     display: flex;
-    flex-direction: column-reverse; /* Reverses the order to put content at the bottom */
-    justify-content: flex-start; /* Aligns content to the bottom */
-    align-items: center; /* Center horizontally */
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 0px;
   }
   .banner__info {
