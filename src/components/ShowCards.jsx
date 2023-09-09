@@ -4,8 +4,6 @@ import "../styles/ShowCards.css";
 
 function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
-  // https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
-  // Great algo to randomize what I get from fetching
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -14,25 +12,26 @@ function shuffleArray(array) {
 }
 
 function ShowCards({ posters, titles }) {
-  if (!Array.isArray(posters)) {
+  if (!Array.isArray(posters) || !Array.isArray(titles)) {
     return null;
   }
 
-  const shuffledPosters = shuffleArray([...posters]);
-  const shuffledTitles = shuffleArray([...titles]);
+  // Create an array of shuffled indexes
+  const shuffledIndexes = shuffleArray(
+    Array.from(Array(posters.length).keys())
+  );
 
   return (
     <div className="showcard__container">
-      {/*<h2 className="showcards__category">Popular</h2>*/}
       <div className="wrapper">
-        {shuffledPosters.map((poster, index) => (
+        {shuffledIndexes.map((index) => (
           <div key={index}>
             <img
               className="card"
-              src={`https://image.tmdb.org/t/p/w500${poster}`}
+              src={`https://image.tmdb.org/t/p/w500${posters[index]}`}
               alt=""
-            />{" "}
-            <p className="showcards__title">{shuffledTitles[index]}</p>
+            />
+            <p className="showcards__title">{titles[index]}</p>
           </div>
         ))}
       </div>
