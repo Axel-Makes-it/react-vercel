@@ -2,6 +2,7 @@ import React from "react";
 import ShowMoviesShows from "./api/ShowMoviesShows";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ShowMoviesShows category="upcoming" />
       <ShowMoviesShows category="top_rated" />
       <ShowMoviesShows category="popular" />
+      <Footer />
     </div>
   );
 }

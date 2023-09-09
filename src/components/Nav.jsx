@@ -54,7 +54,7 @@ function Nav() {
 
   return (
     <>
-      <div className="nav__container">
+      <nav className="nav__container">
         <div className="nav__logo__container">
           <img src={Logo} alt="Logo" width={60.89} height={20} />
         </div>
@@ -92,7 +92,7 @@ function Nav() {
           </li>
           {profileModalVisible && <NavProfileModal />}
         </ul>
-      </div>
+      </nav>
       {/* The modal menu for smaller screens */}
       <>
         <div className="nav__select__container" ref={selectMenuRef}>
