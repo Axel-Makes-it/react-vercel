@@ -15,7 +15,7 @@ function Footer() {
         <li>Terms of Use</li>
         <li>Made with React</li>
         <li>I'll Turn Design To Code</li>
-        <li>2023 | Hulu Developed Axel</li>
+        <li>2023 | Hulu - Developed Axel</li>
       </ul>
     </footer>
   );
