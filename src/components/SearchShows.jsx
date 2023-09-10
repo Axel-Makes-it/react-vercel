@@ -8,17 +8,19 @@ function SearchShows() {
 
   return (
     <div className="SearchShow__container">
-      <form className="SearchShow__form" onSubmit={handleSubmit}>
-        <input
-          className="SearchShow__input"
-          type="text"
-          spellCheck="false"
-          placeholder="Search"
-        />
-        <button className="SearchShow__clear__btn" type="submit">
-          Clear
-        </button>
-      </form>
+      <div className="SearchShow__form__wrapper">
+        <form className="SearchShow__form" onSubmit={handleSubmit}>
+          <input
+            className="SearchShow__input"
+            type="text"
+            spellCheck="false"
+            placeholder="Search"
+          />
+          <button className="SearchShow__clear__btn" type="submit">
+            Clear
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

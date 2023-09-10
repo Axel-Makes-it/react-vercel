@@ -7,7 +7,7 @@
   border: 3px solid #ffffff;
   border-radius: 8px;
   width: 100%;
-  margin: 80px 40px 40px 40px;
+
   height: 80px;
   font-size: 50px;
   padding-left: 16px;
@@ -23,7 +23,27 @@
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 80px;
   cursor: pointer;
   background-color: transparent;
+}
+.SearchShow__container {
+  top: 80px;
+  margin: 80px 40px 40px 40px;
+  background-color: #1e2126;
+}
+
+@media (max-width: 767px) {
+  .SearchShow__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .SearchShow__clear__btn {
+    margin-top: 0px;
+  }
+  .SearchShow__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
