@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 import LogoPlus from "../images/Logo2.png";
 
 function Footer() {
+  const dev = "Axel";
   return (
     <footer>
       <img
@@ -15,7 +16,7 @@ function Footer() {
         <li>Terms of Use</li>
         <li>Made with React</li>
         <li>I'll Turn Design To Code</li>
-        <li>2023 | Hulu - Developed Axel</li>
+        <li>2023 | Hulu - Developed by {dev}</li>
       </ul>
     </footer>
   );

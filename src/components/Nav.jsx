@@ -4,7 +4,7 @@ import downIcon from "../images/down.svg";
 import "../styles/Nav.css";
 import { useState, useEffect, useRef } from "react";
 import NavProfileModal from "./NavProfileModal";
-import { Link } from "react-router-dom"; // Import Link component
+import { Link } from "react-router-dom";
 
 function Nav() {
   const menu = ["Home", "TV", "Movies", "My Stuff", "Hubs"];

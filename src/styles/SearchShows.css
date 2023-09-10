@@ -1,5 +1,6 @@
 .SearchShow__form {
   margin-right: 100px;
+  display: flex;
 }
 .SearchShow__input {
   background-color: #1e2126;
@@ -13,4 +14,16 @@
   color: #1ce783;
   font-weight: 600;
   outline: none;
+}
+.SearchShow__clear__btn {
+  height: 85px;
+  color: #a8afbd;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 80px;
+  cursor: pointer;
+  background-color: transparent;
 }
