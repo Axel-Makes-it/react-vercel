@@ -17,7 +17,7 @@
   height: 190px;
   margin: 10px;
   border-radius: 15px;
-
+  cursor: pointer;
   border: 5px solid transparent;
   box-shadow: 0 0 5px transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;

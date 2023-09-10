@@ -1,0 +1,16 @@
+.SearchShow__form {
+  margin-right: 100px;
+}
+.SearchShow__input {
+  background-color: #1e2126;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  margin: 80px 40px 40px 40px;
+  height: 80px;
+  font-size: 50px;
+  padding-left: 16px;
+  color: #1ce783;
+  font-weight: 600;
+  outline: none;
+}
