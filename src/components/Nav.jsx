@@ -4,6 +4,7 @@ import downIcon from "../images/down.svg";
 import "../styles/Nav.css";
 import { useState, useEffect, useRef } from "react";
 import NavProfileModal from "./NavProfileModal";
+import { Link } from "react-router-dom"; // Import Link component
 
 function Nav() {
   const menu = ["Home", "TV", "Movies", "My Stuff", "Hubs"];
@@ -56,13 +57,23 @@ function Nav() {
     <>
       <nav className="nav__container">
         <div className="nav__logo__container">
-          <img src={Logo} alt="Logo" width={60.89} height={20} />
+          <Link to="/">
+            {" "}
+            {/* Wrap the logo with Link to go to the home page */}
+            <img src={Logo} alt="Logo" width={60.89} height={20} />
+          </Link>
         </div>
 
         <ul className="nav__ul">
           {menu.map((menuItem, index) => (
             <li key={index} className="nav__menu__btn">
-              {menuItem}
+              {index === 0 ? (
+                <Link to="/" style={{ textDecoration: "none" }}>
+                  Home
+                </Link>
+              ) : (
+                menuItem
+              )}
             </li>
           ))}
         </ul>
@@ -73,7 +84,7 @@ function Nav() {
           onClick={toggleMenu}
           ref={selectMenuRef}
         >
-          <li>Home</li>
+          <li>Selection</li>
           <li>
             <img src={downIcon} alt="dropdown-icon" />
           </li>
@@ -81,7 +92,11 @@ function Nav() {
 
         <ul className="nav__profile__container">
           <li className="nav__search__container">
-            <img src={searchIcon} alt="search" width={27} height={27} />
+            <Link to="/search">
+              {" "}
+              {/* Wrap the search icon with Link */}
+              <img src={searchIcon} alt="search" width={27} height={27} />
+            </Link>
           </li>
           <li
             className={`nav__profile ${profileModalVisible ? "active" : null}`}

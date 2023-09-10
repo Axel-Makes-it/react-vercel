@@ -1,21 +1,22 @@
+// src/App.js
 import React from "react";
-import ShowMoviesShows from "./api/ShowMoviesShows";
-import Banner from "./components/Banner";
-import Nav from "./components/Nav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
 
 function App() {
   return (
-    <div className="app-container">
-      <Nav />
-      <Banner />
-      <ShowMoviesShows category="popular" />
-      <ShowMoviesShows category="top_rated" />
-      <ShowMoviesShows category="upcoming" />
-      <ShowMoviesShows category="top_rated" />
-      <ShowMoviesShows category="popular" />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
