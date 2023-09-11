@@ -34,6 +34,18 @@
   background-color: transparent;
 }
 
+.SearchShows__wrapper {
+}
+
+.SearchShows__card {
+  width: 175px;
+  height: 95px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+
 @media (max-width: 767px) {
   .SearchShow__form {
     display: flex;

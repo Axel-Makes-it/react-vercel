@@ -59,11 +59,11 @@ function SearchShows() {
       </form>
 
       <div className="showcard__container">
-        <div className="wrapper">
+        <div className="SearchShows__wrapper">
           {movies.map((movie) => (
             <div key={movie.id}>
               <img
-                className="card"
+                className="SearchShows__card"
                 src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                 alt={movie.title}
               />
