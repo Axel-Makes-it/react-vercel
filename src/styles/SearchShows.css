@@ -43,7 +43,8 @@
   margin-bottom: 15px;
 }
 
-.SearchShows__wrapper {
+.SearchShows__Helper {
+  margin-top: 5px;
 }
 
 .SearchShows__card {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styles/SearchShows.css";
-import ShowMoviesShows from "../api/ShowMoviesShows";
 
 function SearchShows() {
   const API_KEY = "c566f55b172728d7f84abac7efdfa535";
@@ -61,7 +60,7 @@ function SearchShows() {
 
       {searchValue.trim() === "" ? (
         <>
-          <h1>
+          <h1 className="SearchShows__Helper">
             Go ahead and search for movies. For Example, Spider-man, Harry
             Potter...
           </h1>
