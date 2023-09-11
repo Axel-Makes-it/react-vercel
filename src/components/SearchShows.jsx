@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/SearchShows.css";
+import ShowMoviesShows from "../api/ShowMoviesShows";
 
 function SearchShows() {
   const API_KEY = "c566f55b172728d7f84abac7efdfa535";
@@ -58,20 +59,29 @@ function SearchShows() {
         </button>
       </form>
 
-      <div className="showcard__container">
-        <div className="SearchShows__wrapper">
-          {movies.map((movie) => (
-            <div key={movie.id}>
-              <img
-                className="SearchShows__card"
-                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                alt={movie.title}
-              />
-              <p className="showcards__title">{movie.title}</p>
-            </div>
-          ))}
+      {searchValue.trim() === "" ? (
+        <>
+          <h1>
+            Go ahead and search for movies. For Example, Spider-man, Harry
+            Potter...
+          </h1>
+        </>
+      ) : (
+        <div className="showcard__container">
+          <div className="SearchShows__wrapper">
+            {movies.map((movie) => (
+              <div className="SearchShows__list" key={movie.id}>
+                <img
+                  className="SearchShows__card"
+                  src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                  alt={movie.title}
+                />
+                <p className="SearchShows__title">{movie.title}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

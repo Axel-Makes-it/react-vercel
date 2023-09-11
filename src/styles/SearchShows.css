@@ -1,11 +1,12 @@
 .SearchShow__container {
-  top: 80px;
-  margin: 90px 40px 20px 40px;
+  top: 70px;
+  margin: 70px 40px 20px 40px;
 }
 
 .SearchShow__form {
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
@@ -20,6 +21,9 @@
   color: #1ce783;
   border-radius: 10px;
   font-weight: 600;
+  display: flex;
+  justify-items: center;
+  margin-bottom: 10px;
 }
 
 .SearchShow__clear__btn {
@@ -27,23 +31,52 @@
   color: #a8afbd;
   font-size: 20px;
   padding: 5px;
+
+  width: 165px;
+  align-items: center;
+  border-radius: 8px;
   border: none;
   outline: none;
   cursor: pointer;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #a8afbd52;
+  margin-bottom: 15px;
 }
 
 .SearchShows__wrapper {
 }
 
 .SearchShows__card {
-  width: 175px;
-  height: 95px;
+  width: 135px;
+  height: 76px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   border: 5px solid transparent;
+}
+
+.SearchShows__list {
+  display: flex;
+  border-bottom: 2px solid #292c33;
+  cursor: pointer;
+}
+
+.SearchShows__list:hover {
+  background-color: #292c33;
+}
+
+.SearchShows__title {
+  padding-left: 15px;
+  color: #ffffffd0;
+  font-family: "Graphik-Regular";
+  margin-top: 13px;
+  width: 100%;
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("/public/fonts/Graphik-Regular.ttf") format("truetype");
 }
 
 @media (max-width: 767px) {
