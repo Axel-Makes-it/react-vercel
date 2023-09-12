@@ -4,8 +4,8 @@ import "../styles/YouTubeModal.css";
 
 function YouTubeModal({ videoId, onClose }) {
   const opts = {
-    width: "560",
-    height: "315",
+    width: "504",
+    height: "283.5",
   };
 
   return (
