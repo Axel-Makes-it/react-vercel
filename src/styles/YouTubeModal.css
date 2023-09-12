@@ -1,0 +1,22 @@
+.close {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  z-index: 10000000;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: #000000e8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
