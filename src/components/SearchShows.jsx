@@ -60,7 +60,7 @@ function SearchShows() {
 
       {searchValue.trim() === "" ? (
         <>
-          <h1 className="SearchShows__Helper"></h1>
+          <h1 className="SearchShows__Helper">Find a movie</h1>
         </>
       ) : (
         <div className="showcard__container">

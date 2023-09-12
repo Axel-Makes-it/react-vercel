@@ -22,7 +22,7 @@ function ShowCards({ posters, titles, category }) {
 
   const handleCardClick = async (title, index) => {
     try {
-      const YOUTUBE_API_KEY = "AIzaSyA1pFqcUBBZ5GoZsz54WgiJFizHCP0LB7Y";
+      const YOUTUBE_API_KEY = "AIzaSyArzouHMpAP2U20GN5A5nYfMdR1ga-CPa0";
       const response = await fetch(
         `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(
           title + " trailer"
