@@ -4,7 +4,6 @@ import "../styles/ShowCards.css";
 import YouTubeModal from "../components/YouTubeModal";
 
 function shuffleArray(array) {
-  // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -18,7 +17,6 @@ function ShowCards({ posters, titles, category }) {
   const [shuffledIndexes, setShuffledIndexes] = useState([]);
 
   useEffect(() => {
-    // Shuffle the indexes once when the component mounts
     setShuffledIndexes(shuffleArray([...Array(posters.length).keys()]));
   }, [posters]);
 
