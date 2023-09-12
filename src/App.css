@@ -1,6 +1,3 @@
-/* App.css or your global CSS file */
-
-/* Reset margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +12,7 @@
 }
 
 ::-webkit-scrollbar {
-  height: 8px; /* Adjust the height to your preference */
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -23,8 +20,8 @@
 }
 
 ::-webkit-scrollbar:vertical {
-  width: 8px; /* Adjust the width to your preference */
-  background-color: transparent; /* Make it transparent */
+  width: 8px;
+  background-color: transparent;
 }
 
 html {
@@ -36,19 +33,16 @@ html:hover {
   scrollbar-color: auto auto;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  height: 0px; /* height of horizontal scrollbar ← You're missing this */
+  height: 0px;
   width: 4px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #a3a3a3;
   border-radius: 4px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #808080;
 }

@@ -8,7 +8,7 @@ function ShowMoviesShows({ category }) {
   const [movieTitles, setMovieTitles] = useState([]);
 
   useEffect(() => {
-    async function fetchMoviePosters() {
+    async function fetchMovieData() {
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/movie/${category}?api_key=${API_KEY}`
@@ -28,10 +28,16 @@ function ShowMoviesShows({ category }) {
       }
     }
 
-    fetchMoviePosters();
+    fetchMovieData();
   }, [category]);
 
-  return <ShowCards posters={moviePosters} titles={movieTitles} />;
+  return (
+    <ShowCards
+      posters={moviePosters}
+      titles={movieTitles}
+      category={category}
+    />
+  );
 }
 
 export default ShowMoviesShows;
