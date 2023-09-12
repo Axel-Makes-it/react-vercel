@@ -60,10 +60,7 @@ function SearchShows() {
 
       {searchValue.trim() === "" ? (
         <>
-          <h1 className="SearchShows__Helper">
-            Go ahead and search for movies. For Example, Spider-man, Harry
-            Potter...
-          </h1>
+          <h1 className="SearchShows__Helper"></h1>
         </>
       ) : (
         <div className="showcard__container">
