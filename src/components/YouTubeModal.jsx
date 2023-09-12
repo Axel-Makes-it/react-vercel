@@ -1,6 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
 import YouTube from "react-youtube";
+import "../styles/YouTubeModal.css";
 
 function YouTubeModal({ videoId, onClose }) {
   const opts = {
