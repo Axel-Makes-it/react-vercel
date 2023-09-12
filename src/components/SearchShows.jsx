@@ -52,6 +52,7 @@ function SearchShows() {
           autoComplete="off"
           placeholder="Search"
           name="searchInput"
+          autoFocus
         />
         <button className="SearchShow__clear__btn" onClick={handleClear}>
           Clear
